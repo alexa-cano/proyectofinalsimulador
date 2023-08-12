@@ -11,18 +11,30 @@
     <p>Estima el impacto ambiental de tus actividades diarias.</p>
     <form id="calculator-form">
       <div class="section">
-        <h2>Agua</h2>
-        <p>¿Cuántos litros de agua consumes al día?</p>
-        <input type="number" id="water-input" min="0" value="0">
-        <label for="water-input">Litros</label>
+        
+        <div class="section-content">
+          <h2>Agua</h2>
+          <p>¿Cuántos litros de agua consumes al día?</p>
+          <input type="number" id="water-input" min="0" value="0">
+          <label for="water-input">Litros</label>
+        </div>
+        <div class="section-image">
+          <img src="images/agua.jpg" alt="Agua">
+        </div>
       </div>
+
       <div class="section">
-        <h2>Energía</h2>
-        <p>¿Cuántos kilovatios-hora de energía eléctrica consumes al mes?</p>
-        <input type="number" id="energy-input" min="0" value="0">
-        <label for="energy-input">kWh</label>
+        <div class="section-content">
+          <h2>Energía</h2>
+          <p>¿Cuántos kilovatios-hora de energía eléctrica consumes al mes?</p>
+          <input type="number" id="energy-input" min="0" value="0">
+          <label for="energy-input">kWh</label>
+        </div>
+        <div class="section-image">
+          <img src="images/foco.jpg" alt="Energía">
+        </div>
       </div>
-      <div class="section">
+      <div class="section-transporte">
         <h2>Transporte</h2>
         <p>¿Qué medio de transporte usas habitualmente?</p>
         <select id="transport-input">
@@ -32,32 +44,60 @@
           <option value="3">Automóvil</option>
           <option value="4">Avión</option>
         </select>
+        <img src="images/transportes.jpg" alt="Energía">
         <p>¿Cuántos kilómetros recorres al día?</p>
         <input type="number" id="distance-input" min="0" value="0">
         <label for="distance-input">Km</label>
       </div>
-      <div class="section">
+      
+      <div class="section-residuos">
         <h2>Residuos</h2>
         <p>¿Qué tipo de residuos generas?</p>
-        <div class="checkbox-group">
-          <input type="checkbox" id="organic-input" checked>
-          <label for="organic-input">Orgánicos</label>
-          <input type="checkbox" id="paper-input" checked>
-          <label for="paper-input">Papel y cartón</label>
-          <input type="checkbox" id="plastic-input" checked>
-          <label for="plastic-input">Plástico</label>
-          <input type="checkbox" id="metal-input" checked>
-          <label for="metal-input">Metal</label>
-          <input type="checkbox" id="glass-input" checked>
-          <label for="glass-input">Vidrio</label>
+        <div class="residue-list">
+          <div class="residue">
+            <label>
+              <input type="checkbox" id="organic-input">
+              <span class="residue-label">Orgánicos</span>
+              <img class="residue-image" src="images/organico.jpg" alt="Orgánicos">
+            </label>
+          </div>
+          <div class="residue">
+            <label>
+              <input type="checkbox" id="paper-input">
+              <span class="residue-label">Papel y cartón</span>
+              <img class="residue-image" src="images/papel.jpg" alt="Papel y cartón">
+            </label>
+          </div>
+          <div class="residue">
+            <label>
+              <input type="checkbox" id="plastic-input">
+              <span class="residue-label">Plástico</span>
+              <img class="residue-image" src="images/plástico.jpg" alt="Plástico">
+            </label>
+          </div>
+          <div class="residue">
+            <label>
+              <input type="checkbox" id="metal-input">
+              <span class="residue-label">Metal</span>
+              <img class="residue-image" src="images/metal.jpg" alt="Metal">
+            </label>
+          </div>
+          <div class="residue">
+            <label>
+              <input type="checkbox" id="glass-input">
+              <span class="residue-label">Vidrio</span>
+              <img class="residue-image" src="images/vidrio.jpg" alt="Vidrio">
+            </label>
+          </div>
         </div>
         <p>¿Cuántos kilogramos de residuos produces al día?</p>
         <input type="number" id="waste-input" min="0" value="0">
         <label for="waste-input">Kg</label>
       </div>
-
+      
+  
       <!-- Este botón llama a la función calculate() para obtener el resultado -->
-      <button type="button" id="calculate-button" onclick="calculate()">Calcular</button>
+      <button type="button" id="calculate-button" onclick="calcular()">Calcular</button>
 
       <!-- Este div muestra el resultado de la calculadora -->
       <div id="result"></div>
@@ -67,8 +107,8 @@
   </div>
 
   <!-- Este script contiene la lógica de la calculadora -->
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 
 </body>
 
-</html>
+</html> 
